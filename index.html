@@ -1,9 +1,28 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Azoria | AI Business Consulting</title>
 
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Transform your business with AI innovation. Azoria provides cutting-edge AI consulting services to drive growth and optimize operations." />
+    <meta name="keywords" content="AI consulting, business innovation, artificial intelligence, digital transformation, business optimization" />
+    <meta name="author" content="Azoria" />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:title" content="Azoria | AI Business Consulting" />
+    <meta property="og:description" content="Transform your business with AI innovation. Expert AI consulting services for business growth and optimization." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://azoria.ai" />
+
+    <title property="pageTitle">Azoria | AI Business Consulting</title>
+
+    <!-- Mavo Required Resources -->
+    <link rel="stylesheet" href="https://get.mavo.io/mavo.min.css" />
+    <script src="https://get.mavo.io/mavo.min.js"></script>
+    <script src="https://web.celeritytechconsulting.com/form-wrapper.js" defer></script>
+    <script src="https://web.celeritytechconsulting.com/image-gallery.js" defer></script>
+
+    <!-- External Resources -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
@@ -139,28 +158,71 @@
     </style>
   </head>
   <body>
-    <div id="canvas-container"></div>
+    <div
+      mv-app="indexHtml-main-xoe9z3"
+      mv-plugins="tinymce"
+      mv-init="#initial"
+      mv-storage="https://github.com/hsingh23/website-demo"
+      mv-bar="no-login"
+      autosave="3"
+      mv-upload-path="pictures"
+    >
+      <div id="canvas-container"></div>
 
-    <nav>
-      <div class="logo">Azoria</div>
-      <div class="nav-links">
-        <a href="./services">Services</a>
-        <a href="./about">About</a>
-        <a href="./case-studies">Case Studies</a>
-        <a href="./contact">Contact</a>
-      </div>
-    </nav>
+      <nav mv-group="navigation">
+        <div class="logo tinymce" property="logoText">Azoria</div>
+        <div class="nav-links" mv-list>
+          <a href="[url]" class="tinymce" mv-list-item="navigationLinks" property="text">[text]</a>
+        </div>
+      </nav>
 
-    <section class="hero">
-      <div class="hero-content">
-        <h1>Transform Your Business with <span class="gradient-text">AI Innovation</span></h1>
-        <p>
-          Unlock the power of artificial intelligence to drive growth, optimize operations, and stay ahead of the competition. Partner with Azoria for cutting-edge AI consulting
-          services.
-        </p>
-        <a href="./contact" class="cta-button">Get Started</a>
-      </div>
-    </section>
+      <section class="hero">
+        <div class="hero-content" mv-group="heroContent">
+          <h1>
+            <span property="headingStart" class="tinymce">Transform Your Business with</span>
+            <span property="headingHighlight" class="gradient-text tinymce">AI Innovation</span>
+          </h1>
+          <p property="description" class="tinymce">
+            Unlock the power of artificial intelligence to drive growth, optimize operations, and stay ahead of the competition. Partner with Azoria for cutting-edge AI consulting
+            services.
+          </p>
+          <a href="[ctaUrl]" class="cta-button tinymce" property="ctaText">Get Started</a>
+        </div>
+      </section>
+    </div>
+
+    <script type="application/json" id="initial">
+      {
+        "navigation": {
+          "logoText": "Azoria",
+          "navigationLinks": [
+            {
+              "text": "Services",
+              "url": "./services"
+            },
+            {
+              "text": "About",
+              "url": "./about"
+            },
+            {
+              "text": "Case Studies",
+              "url": "./case-studies"
+            },
+            {
+              "text": "Contact",
+              "url": "./contact"
+            }
+          ]
+        },
+        "heroContent": {
+          "headingStart": "Transform Your Business with",
+          "headingHighlight": "AI Innovation",
+          "description": "Unlock the power of artificial intelligence to drive growth, optimize operations, and stay ahead of the competition. Partner with Azoria for cutting-edge AI consulting services.",
+          "ctaText": "Get Started",
+          "ctaUrl": "./contact"
+        }
+      }
+    </script>
 
     <script>
       // Three.js Animation
@@ -202,7 +264,6 @@
         particles.rotation.x += 0.0001;
         particles.rotation.y += 0.0002;
 
-        // Mouse interaction
         if (mouseX && mouseY) {
           particles.rotation.x += mouseY * 0.00001;
           particles.rotation.y += mouseX * 0.00001;
@@ -211,7 +272,6 @@
         renderer.render(scene, camera);
       }
 
-      // Mouse movement tracking
       let mouseX = 0;
       let mouseY = 0;
 
@@ -220,7 +280,6 @@
         mouseY = event.clientY - window.innerHeight / 2;
       });
 
-      // Handle window resize
       window.addEventListener("resize", () => {
         camera.aspect = window.innerWidth / window.innerHeight;
         camera.updateProjectionMatrix();
