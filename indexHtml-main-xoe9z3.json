@@ -1,0 +1,30 @@
+{
+	"navigation": {
+		"logoText": "Azoria",
+		"navigationLinks": [
+			{
+				"text": "Services",
+				"url": "./services"
+			},
+			{
+				"text": "About",
+				"url": "./about"
+			},
+			{
+				"text": "Case Studies",
+				"url": "./case-studies"
+			},
+			{
+				"text": "Contact",
+				"url": "./contact"
+			}
+		]
+	},
+	"heroContent": {
+		"headingStart": "Transform Your Business with",
+		"headingHighlight": "AI Innovation",
+		"description": "Unlock the power of artificial intelligence to drive growth, optimize operations, and stay ahead of the competition. Partner with Azoria for cutting-edge AI consulting services.",
+		"ctaText": "Get Started",
+		"ctaUrl": "./contact"
+	}
+}
