@@ -26,6 +26,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+    <style>
+      .mv-bar.mv-ui {
+        z-index: 10000 !important;
+      }
+    </style>
 
     <style>
       :root {
@@ -172,7 +177,9 @@
       <nav mv-group="navigation">
         <div class="logo tinymce" property="logoText">Azoria</div>
         <div class="nav-links" mv-list>
-          <a href="[url]" class="tinymce" mv-list-item="navigationLinks" property="text">[text]</a>
+          <span mv-list-item="navigationLinks">
+            <a href="[url]" class="tinymce">[text]</a>
+          </span>
         </div>
       </nav>
 
